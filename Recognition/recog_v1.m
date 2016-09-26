@@ -26,8 +26,9 @@ im_files = dir(fullfile(datapath,'*.jpg'));
 recog_img = facerecog(datapath,TestImage);
 selected_img = fullfile(datapath, im_files(recog_img).name);
 select_img = imread(selected_img);
-imshow(select_img);
+figure,imshow(select_img);
 title('Recognized Image');
+hold on
 test_img = imread(TestImage);
 figure,imshow(test_img);
 title('Test Image');
